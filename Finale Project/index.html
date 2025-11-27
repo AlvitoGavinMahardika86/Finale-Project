@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Word Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="authArea">
+        <span id="userNameDisplay" style="font-weight: bold; color: #333;"></span>
+        <button id="authButton">Login</button>
+    </div>
+
+    <div class="container">
+        <h1>🗣️ Penerjemah Kata Sederhana</h1>
+        <p>Masukkan kata Bahasa Indonesia atau Inggris untuk diterjemahkan.</p>
+
+        <input type="text" id="wordInput" placeholder="Ketik kata di sini...">
+        <button id="translateButton">Terjemahkan</button>
+
+        <div id="resultContainer" class="result-box">
+            <span id="resultText">Kamus siap digunakan! Coba ketik 'happy' atau 'rumah'.</span>
+        </div>
+    </div>
+    
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <h2 id="modalTitle">Simulasi Login</h2>
+        
+        <form id="loginForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" required>
+          
+          <div id="confirmPasswordGroup" style="display: none;">
+            <label for="confirmPassword">Konfirmasi Password:</label>
+            <input type="password" id="confirmPassword">
+          </div>
+          
+          <button type="submit" id="submitButton">Login</button>
+          
+          <p id="loginMessage" style="color: red; text-align: center; margin-top: 10px;"></p>
+        </form>
+        
+        <button id="toggleAuthMode" style="margin-top: 10px; background: none; border: none; color: #007bff; cursor: pointer;">
+            Belum punya akun? **Daftar**
+        </button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

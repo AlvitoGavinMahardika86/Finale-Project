@@ -1,0 +1,176 @@
+/* --- GAYA DASAR BADAN & CONTAINER --- */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* --- GAYA PENERJEMAHAN --- */
+#wordInput {
+    padding: 12px;
+    width: calc(100% - 24px);
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+#translateButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+#translateButton:hover {
+    background-color: #1e7e34;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+#resultText {
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- GAYA LOGIN/LOGOUT HEADER --- */
+#authButton {
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#authArea {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* ========================================================== */
+/* --- LOGIN SCREEN FULL-SCREEN (MODAL) STYLING --- */
+/* ========================================================== */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    text-align: left;
+    margin: 0; 
+    animation: fadeIn 0.3s;
+}
+
+/* Gaya Form Input dan Tombol di dalam Modal */
+#loginForm label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#loginForm button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#loginForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#toggleAuthMode {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 0.9em;
+    margin-top: 10px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+#toggleAuthMode:hover {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
